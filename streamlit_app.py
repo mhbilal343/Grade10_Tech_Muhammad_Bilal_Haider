@@ -4,7 +4,7 @@ from datetime import datetime
 
 #__________________________________________
 
-st.set_page_config(page_title='Student Planner', page_icon='📚', layout='centered')
+st.set_page_config(page_title="Student Planner", page_icon='🤓', layout='centered')
 
 #__________________________________________
 
@@ -38,6 +38,9 @@ def view_tasks():
         else:
             color = 'black'
 
+        
+        
+        
         with st.container():
             cols = st.columns([3, 2, 2, 2, 2, 2])
             cols[0].markdown(f"<span style='color:{color}'><b>{task['name']}</b></span>", unsafe_allow_html=True)
@@ -59,6 +62,8 @@ def view_tasks():
     if remove_index is not None:
         removed_task = st.session_state.tasks.pop(remove_index)
         st.success(f"'{removed_task['name']}' has been removed")
+#__________________________________________
+
 
 def main():
     st.title("Student Planner / To-Do List App")

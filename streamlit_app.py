@@ -67,7 +67,7 @@ def view_tasks():
 
 # MAIN FUNCTION
 def main():
-    st.title("Student Planner / To-Do List App")
+    st.title("Student Planner")
 
     menu = ["Add Task", "View Tasks"]
     choice = st.sidebar.radio("Menu", menu)
